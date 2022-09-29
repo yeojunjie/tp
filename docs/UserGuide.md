@@ -16,15 +16,15 @@ faster than traditional GUI apps.
 ## Quick start
 
 1. Ensure you have Java `11` or above installed in your Computer.
-[comment]: <> (TODO: Add our release here)
-1. Download the latest `addressbook.jar` from [here](https://github.com/se-edu/addressbook-level3/releases).
 
-1. Copy the file to the folder you want to use as the _home folder_ for your AddressBook.
+2. Download the latest `addressbook.jar` from [here](https://github.com/se-edu/addressbook-level3/releases).
 
-1. Double-click the file to start the app. The GUI similar to the below should appear in a few seconds. Note how the app contains some sample data.<br>
+3. Copy the file to the folder you want to use as the _home folder_ for your AddressBook.
+
+4. Double-click the file to start the app. The GUI similar to the below should appear in a few seconds. Note how the app contains some sample data.<br>
    ![Ui](images/Ui.png)
 
-1. Type the command in the command box and press Enter to execute it. e.g. typing **`help`** and pressing Enter will open the help window.<br>
+5. Type the command in the command box and press Enter to execute it. e.g. typing **`help`** and pressing Enter will open the help window.<br>
    Some example commands you can try:
 
    * **`task list`** : Lists all tasks.
@@ -35,7 +35,7 @@ faster than traditional GUI apps.
 
    * **`exit`** : Exits the app.
 
-1. Refer to the [Features](#features) below for details of each command.
+6. Refer to the [Features](#features) below for details of each command.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -130,13 +130,23 @@ _Details coming soon..._
 
 ## Command summary
 
-[comment]: <> (TODO: Update this)
-| Action             | Format, Examples                                                                                   |
-|--------------------|----------------------------------------------------------------------------------------------------|
-| **Add student**    | `student add n/STUDENT_NAME` e.g. `student add n/James Ho`                                         |
-| **Remove student** | `student remove n/STUDENT_NAME` e.g. `student remove n/James Ho`                                   |
-| **Rename student** | `student rename n/OLD_STUDENT_NAME n/NEW_STUDENT_NAME` e.g. `student rename n/Janes Ho n/James Ho` |
-| **List students**  | `student list`                                                                                     |
-| **Add task**       | `task add n/TASK_NAME` e.g. `task add n/Grade Mission 1`                                           |
-| **Remove task**    | `task remove n/TASK_NAME` e.g. `task remove n/Grade Mission 1`                                     |
-| **                 |                                                                                                    |
+| Action                            | Format, Examples                                                                                     |
+|-----------------------------------|------------------------------------------------------------------------------------------------------|
+| **Add student**                   | `student add n/STUDENT_NAME` e.g. `student add n/James Ho`                                           |
+| **Remove student**                | `student remove n/STUDENT_NAME` e.g. `student remove n/James Ho`                                     |
+| **Rename student**                | `student rename n/OLD_STUDENT_NAME n/NEW_STUDENT_NAME` e.g. `student rename n/Janes Ho n/James Ho`   |
+| **List students**                 | `student list`                                                                                       |
+| **Add task**                      | `task add n/TASK_NAME` e.g. `task add n/Grade Mission 1`                                             |
+| **Remove task**                   | `task remove n/TASK_NAME` e.g. `task remove n/Grade Mission 1`                                       |
+| **Rename task**                   | `task rename n/OLD_TASK_NAME n/NEW_TASK_NAME` e.g. `task rename n/Grade Mission 1 n/Grade Mission 2` |
+| **Add deadline**                  | `task deadline n/TASK_NAME d/DEADLINE` e.g. `task deadline n/Grade Mission 2 d/2020-10-10`           |
+| **List tasks**                    | `task list`                                                                                          |
+| **Mark task**                     | `task mark i/TASK_NUMBER` e.g. `task mark i/1`                                                       |
+| **Unmark task**                   | `task unmark i/TASK_NUMBER` e.g. `task unmark i/1`                                                   |
+| **Assign task**                   | `task assign n/TASK_NAME n/STUDENT_NAME` e.g. `task assign n/Grade Mission 2 n/James Ho`             |
+| **Add group**                     | `group add n/GROUP_NAME` e.g. `group add n/CS2103T`                                                  |
+| **Rename group**                  | `group rename n/OLD_GROUP_NAME n/NEW_GROUP_NAME` e.g. `group rename n/CS2101 n/CS2103T`              |
+| **Remove group**                  | `group remove n/GROUP_NAME` e.g. `group remove n/CS2103T`                                            |
+| **Enrol student**                 | `group enrol n/GROUP_NAME n/STUDENT_NAME` e.g. `group enrol n/CS2103T n/James Ho`                    |
+| **Expel student**                 | `group expel n/GROUP_NAME n/STUDENT_NAME` e.g. `group expel n/CS2103T n/James Ho`                    |
+| **View student roster for group** | `group roster n/GROUP_NAME` e.g. `group roster n/CS2103T`                                            |
