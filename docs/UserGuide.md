@@ -41,16 +41,16 @@ faster than traditional GUI apps.
 
 ## Features
 
-### Add students : `student add studentName`
-* Command `student add <studentName>`
+### Add students : `student add n/studentName`
+* Command `student add n/<studentName>`
 * Adds a student to the list of students
 
-### Remove students : `student remove studentName`
-* Command `student remove <studentName>`
+### Remove students : `student remove n/studentName`
+* Command `student remove n/<studentName>`
 * Removes the named student from the list of students
 
-### Rename students : `student rename oldStudentName newStudentName`
-* Command `student rename <oldStudentName> <newStudentName>`
+### Rename students : `student rename n/oldStudentName n/newStudentName`
+* Command `student rename n/<oldStudentName> n/<newStudentName>`
 * Updates the name of the student
 
 ### List students : `student list`
@@ -58,21 +58,21 @@ faster than traditional GUI apps.
 * Abbreviate with `students`
 * Shows a list of all students
 
-### Add new task : `task add newTaskName`
-* Command `task add <studentName>`
+### Add new task : `task add n/newTaskName`
+* Command `task add n/<taskName>`
 * Adds a task to the list of tasks
 * The task is initially assigned to no students
 
-### Remove task : `task remove taskName`
-* Command `task remove <taskName>`
+### Remove task : `task remove n/taskName`
+* Command `task remove n/<taskName>`
 * Removes the named task from the list of tasks
 
-### Rename task : `task rename oldTaskName newTaskName`
-* Command `task rename <oldTaskName> <newTaskName>`
+### Rename task : `task rename n/oldTaskName n/newTaskName`
+* Command `task rename n/<oldTaskName> n/<newTaskName>`
 * Updates the name of the task
 
-### Add deadline to task : `task deadline taskName deadline`
-* Command `task deadline <taskName> <deadline>`
+### Add deadline to task : `task deadline n/taskName d/deadline`
+* Command `task deadline n/<taskName> d/<deadline>`
 * Adds a deadline to the task
 
 ### List tasks : `task list`
@@ -80,41 +80,41 @@ faster than traditional GUI apps.
 * Abbreviate with `tasks`
 * Shows a list of tasks
 
-### Mark tasks : `task mark taskNumber`
-* Command `task mark <taskNumber>`
+### Mark tasks : `task mark i/taskNumber`
+* Command `task mark i/<taskNumber>`
 * Marks the task with the task number on the list.
 
-### Unmark tasks : `task unmark taskNumber`
-* Command `task unmark <taskNumber>`
+### Unmark tasks : `task unmark i/taskNumber`
+* Command `task unmark i/<taskNumber>`
 * Unmarks the task with the task number on the list.
 
-### Assign a task to a student : `task assign taskName studentName`
-* Command `task assign <taskName> <studentName>`
+### Assign a task to a student : `task assign n/taskName n/studentName`
+* Command `task assign n/<taskName> n/<studentName>`
 * Assign the task `taskName` to the student `studentName`.
 
 
-### Add new group : `group add newGroupName`
-* Command `group add <newGroupName>`
+### Add new group : `group add n/newGroupName`
+* Command `group add n/<newGroupName>`
 * Adds a new group with the name `newGroupName`
 
-### Rename group : `group rename oldGroupName newGroupName`
-* Command `group rename <oldGroupName> <newGroupName>`
+### Rename group : `group rename n/oldGroupName n/newGroupName`
+* Command `group rename n/<oldGroupName> n/<newGroupName>`
 * Renames the group from `oldGroupName` to `newGroupName`
 
-### Remove group : `group remove groupName`
-* Command `group remove <groupName>`
+### Remove group : `group remove n/groupName`
+* Command `group remove n/<groupName>`
 * Removes the group named `groupName`
 
-### Enrol a student into a group : `group enrol groupName studentName`
-* Command `group enrol <groupName> <studentName>`
+### Enrol a student into a group : `group enrol n/groupName n/studentName`
+* Command `group enrol n/<groupName> n/<studentName>`
 * Enrols a student to the group
 
-### Expel a student from a group : `group expel groupName studentName`
-* Command `group expel <groupName> <studentName>`
+### Expel a student from a group : `group expel n/groupName n/studentName`
+* Command `group expel n/<groupName> n/<studentName>`
 * Removes the student `studentName` from the group `groupName`.
 
-### View the list of students in a group : `group roster groupName`
-* Command `group roster <groupName>`
+### View the list of students in a group : `group roster n/groupName`
+* Command `group roster n/<groupName>`
 * Displays a list of students enrolled in `groupName`.
 
 
@@ -131,12 +131,12 @@ _Details coming soon..._
 ## Command summary
 
 [comment]: <> (TODO: Update this)
-| Action     | Format, Examples                                                                                                                                                      |
-|------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Add**    | `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]…​` <br> e.g., `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague` |
-| **Clear**  | `clear`                                                                                                                                                               |
-| **Delete** | `delete INDEX`<br> e.g., `delete 3`                                                                                                                                   |
-| **Edit**   | `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]…​`<br> e.g.,`edit 2 n/James Lee e/jameslee@example.com`                                           |
-| **Find**   | `find KEYWORD [MORE_KEYWORDS]`<br> e.g., `find James Jake`                                                                                                            |
-| **List**   | `list`                                                                                                                                                                |
-| **Help**   | `help`                                                                                                                                                                |
+| Action             | Format, Examples                                                                                   |
+|--------------------|----------------------------------------------------------------------------------------------------|
+| **Add student**    | `student add n/STUDENT_NAME` e.g. `student add n/James Ho`                                         |
+| **Remove student** | `student remove n/STUDENT_NAME` e.g. `student remove n/James Ho`                                   |
+| **Rename student** | `student rename n/OLD_STUDENT_NAME n/NEW_STUDENT_NAME` e.g. `student rename n/Janes Ho n/James Ho` |
+| **List students**  | `student list`                                                                                     |
+| **Add task**       | `task add n/TASK_NAME` e.g. `task add n/Grade Mission 1`                                           |
+| **Remove task**    | `task remove n/TASK_NAME` e.g. `task remove n/Grade Mission 1`                                     |
+| **                 |                                                                                                    |
