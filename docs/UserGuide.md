@@ -67,7 +67,7 @@ faster than traditional GUI apps.
 * Command `task remove <taskName>`
 * Removes the named task from the list of tasks
 
-### Rename students : `task rename oldStudentName newStudentName`
+### Rename task : `task rename oldTaskName newTaskName`
 * Command `task rename <oldTaskName> <newTaskName>`
 * Updates the name of the task
 
