@@ -168,6 +168,10 @@ public class MainWindow extends UiPart<Stage> {
         primaryStage.hide();
     }
 
+    /**
+     *  When the 'Students' button in the sidebar is clicked,
+     *  display a list of students in MainWindow.
+     */
     @FXML
     public void handleClickStudentsButton() {
         studentListPanel = new StudentListPanel(logic.getFilteredStudentList());
@@ -175,6 +179,10 @@ public class MainWindow extends UiPart<Stage> {
         resultListPanelPlaceholder.getChildren().add(studentListPanel.getRoot());
     }
 
+    /**
+     *  When the 'Tasks' button in the sidebar is clicked,
+     *  display a list of tasks in MainWindow.
+     */
     @FXML
     public void handleClickTasksButton() {
         // A helpful comment goes here.
