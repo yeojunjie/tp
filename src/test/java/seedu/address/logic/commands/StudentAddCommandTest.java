@@ -22,6 +22,7 @@ import seedu.address.model.ReadOnlyAddressBook;
 import seedu.address.model.ReadOnlyUserPrefs;
 import seedu.address.model.student.Student;
 import seedu.address.model.student.TutorialGroup;
+import seedu.address.model.task.Task;
 import seedu.address.testutil.StudentBuilder;
 
 public class StudentAddCommandTest {
@@ -137,6 +138,11 @@ public class StudentAddCommandTest {
         }
 
         @Override
+        public Student findStudent(String name) {
+            return null;
+        }
+
+        @Override
         public void setStudent(Student target, Student editedStudent) {
             throw new AssertionError("This method should not be called.");
         }
@@ -159,6 +165,36 @@ public class StudentAddCommandTest {
         @Override
         public void updateFilteredTutorialGroupList(Predicate<TutorialGroup> predicate) {
             throw new AssertionError("This method should not be called.");
+        }
+
+        @Override
+        public boolean hasTask(Task target) {
+            return false;
+        }
+
+        @Override
+        public void deleteTask(Task target) {
+
+        }
+
+        @Override
+        public void addTask(Task task) {
+
+        }
+
+        @Override
+        public void setTask(Task target, Task editedTask) {
+
+        }
+
+        @Override
+        public ObservableList<Task> getFilteredTaskList() {
+            return null;
+        }
+
+        @Override
+        public void updateFilteredTaskList(Predicate<Task> predicate) {
+
         }
 
         @Override
