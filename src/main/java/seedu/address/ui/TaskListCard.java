@@ -38,8 +38,8 @@ public class TaskListCard extends UiPart<Region> {
     public TaskListCard(Task task, int displayedIndex) {
         super(FXML);
         this.task = task;
-        id.setText(String.valueOf(displayedIndex));
-        name.setText(displayedIndex + ". " + task.getTaskName());
+        id.setText(String.valueOf(displayedIndex) + ". ");
+        name.setText(String.valueOf(task.getTaskName()));
         description.setText(task.getTaskDescription().toString());
     }
 
