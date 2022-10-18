@@ -18,7 +18,6 @@
    <Label fx:id="description" text="description"/>
    <Label fx:id="deadline" text="deadline"/>
    <Label fx:id="completion" text="completion"/>
-   <Label fx:id="showMore" text="Click again to expand" maxWidth="Infinity" alignment="CENTER"/>
    <VBox fx:id="taskCard" visible="false" managed="false" VBox.vgrow="ALWAYS">
       <Label text="additionalInfoText" />
       <Label text="otherAdditionalInfoText" />

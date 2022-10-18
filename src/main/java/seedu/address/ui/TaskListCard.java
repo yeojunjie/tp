@@ -16,9 +16,9 @@ public class TaskListCard extends UiPart<Region> {
     public final Task task;
 
     @FXML
-    private VBox cardPane;
+    private VBox cardPane; // Think of this as the entire TaskListCard.
     @FXML
-    private VBox taskCard;
+    private VBox taskCard; // This is the optional information to be displayed.
     @FXML
     private Label id;
     @FXML
@@ -29,8 +29,6 @@ public class TaskListCard extends UiPart<Region> {
     private Label deadline;
     @FXML
     private Label completion;
-    @FXML
-    private Label showMore;
 
     private boolean isToggle;
 
@@ -46,7 +44,6 @@ public class TaskListCard extends UiPart<Region> {
         deadline.setText(String.format("Due by %s", task.getTaskDeadline()));
         completion.setText("10% completed (3/30 students)"); // Dummy text.
         this.isToggle = isToggle;
-        showMore.setVisible(false);
         onCardClicked();
     }
 
