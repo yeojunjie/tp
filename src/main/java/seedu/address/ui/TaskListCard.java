@@ -7,7 +7,7 @@ import javafx.scene.layout.VBox;
 import seedu.address.model.task.Task;
 
 /**
- * An UI component that displays information of a {@code Person}.
+ * An UI component that displays information of a {@code Task}.
  */
 public class TaskListCard extends UiPart<Region> {
 
@@ -43,7 +43,9 @@ public class TaskListCard extends UiPart<Region> {
         description.setText(String.valueOf(task.getTaskDescription()));
         deadline.setText(String.format("Due by %s", task.getTaskDeadline()));
         completion.setText("10% completed (3/30 students)"); // Dummy text.
+
         this.isExpanded = isExpanded;
+        // Use the isExpanded parameter to determine whether to (immediately) show the optional information.
         onCardClicked();
     }
 
@@ -66,20 +68,19 @@ public class TaskListCard extends UiPart<Region> {
     }
 
     /**
-     * Toggles the task list card by expanding or minimizing.
+     * When the <code>TaskListCard</code> is clicked, it toggles between showing optional information and not showing
+     * optional information.
      */
     @FXML
     public void onCardClicked() {
-
         isExpanded = !isExpanded;
+
         if (isExpanded) {
             optionalInfo.setVisible(true);
             optionalInfo.setManaged(true);
-            System.out.println("Toggled");
         } else {
             optionalInfo.setVisible(false);
             optionalInfo.setManaged(false);
-            System.out.println("UnToggled");
         }
     }
 }
