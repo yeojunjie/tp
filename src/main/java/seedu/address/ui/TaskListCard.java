@@ -18,7 +18,7 @@ public class TaskListCard extends UiPart<Region> {
     @FXML
     private VBox cardPane; // Think of this as the entire TaskListCard.
     @FXML
-    private VBox taskCard; // This is the optional information to be displayed.
+    private VBox optionalInfo; // This is the optional information to be displayed.
     @FXML
     private Label id;
     @FXML
@@ -70,14 +70,15 @@ public class TaskListCard extends UiPart<Region> {
      */
     @FXML
     public void onCardClicked() {
+        
         isToggle = !isToggle;
         if (isToggle) {
-            taskCard.setVisible(true);
-            taskCard.setManaged(true);
+            optionalInfo.setVisible(true);
+            optionalInfo.setManaged(true);
             System.out.println("Toggled");
         } else {
-            taskCard.setVisible(false);
-            taskCard.setManaged(false);
+            optionalInfo.setVisible(false);
+            optionalInfo.setManaged(false);
             System.out.println("UnToggled");
         }
     }
