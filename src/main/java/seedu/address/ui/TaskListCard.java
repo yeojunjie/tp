@@ -30,12 +30,12 @@ public class TaskListCard extends UiPart<Region> {
     @FXML
     private Label completion;
 
-    private boolean isToggle;
+    private boolean isExpanded;
 
     /**
      * Creates a {@code TaskListCard} with the given {@code Task} and index to display.
      */
-    public TaskListCard(Task task, int displayedIndex, boolean isToggle) {
+    public TaskListCard(Task task, int displayedIndex, boolean isExpanded) {
         super(FXML);
         this.task = task;
         id.setText(displayedIndex + ".");
@@ -43,7 +43,7 @@ public class TaskListCard extends UiPart<Region> {
         description.setText(String.valueOf(task.getTaskDescription()));
         deadline.setText(String.format("Due by %s", task.getTaskDeadline()));
         completion.setText("10% completed (3/30 students)"); // Dummy text.
-        this.isToggle = isToggle;
+        this.isExpanded = isExpanded;
         onCardClicked();
     }
 
@@ -70,9 +70,9 @@ public class TaskListCard extends UiPart<Region> {
      */
     @FXML
     public void onCardClicked() {
-        
-        isToggle = !isToggle;
-        if (isToggle) {
+
+        isExpanded = !isExpanded;
+        if (isExpanded) {
             optionalInfo.setVisible(true);
             optionalInfo.setManaged(true);
             System.out.println("Toggled");
