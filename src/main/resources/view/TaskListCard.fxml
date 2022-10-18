@@ -17,7 +17,7 @@
    <Label fx:id="deadline" text="deadline" />
    <Label fx:id="completion" text="completion" />
    <VBox fx:id="optionalInfo" managed="false" visible="false" VBox.vgrow="ALWAYS">
-      <Label text="additionalInfoText" />
-      <Label text="otherAdditionalInfoText" />
+      <Label fx:id="studentsHeading" text="studentsHeading" />
+      <Label fx:id="studentsBodyText" text="studentsBodyText" />
    </VBox>
 </VBox>
