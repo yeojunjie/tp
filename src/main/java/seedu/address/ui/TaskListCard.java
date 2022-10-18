@@ -56,6 +56,7 @@ public class TaskListCard extends UiPart<Region> {
             studentsHeading.setVisible(false);
             studentsBodyText.setVisible(false);
         } else {
+            // Populate optionalInfo with the relevant information.
             completion.setText(String.format("??%% completed (??/%d) students", setOfStudents.size()));
             studentsHeading.setText("List of Students:");
             StringBuilder studentsBodyTextString = new StringBuilder();
@@ -65,8 +66,6 @@ public class TaskListCard extends UiPart<Region> {
             studentsBodyText.setText(studentsBodyTextString.toString());
         }
 
-        // Populate optionalInfo with relevant information.
-        studentsHeading.setText("List of Students:");
 
 
         this.isExpanded = isExpanded;
