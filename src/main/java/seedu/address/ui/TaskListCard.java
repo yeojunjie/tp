@@ -1,6 +1,7 @@
 package seedu.address.ui;
 
 import java.util.Set;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Region;
