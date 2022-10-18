@@ -1,13 +1,12 @@
 package seedu.address.ui;
 
+import java.util.Set;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import seedu.address.model.student.Student;
 import seedu.address.model.task.Task;
-
-import java.util.Set;
 
 /**
  * An UI component that displays information of a {@code Task}.
