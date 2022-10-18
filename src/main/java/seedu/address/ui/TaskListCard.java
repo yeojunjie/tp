@@ -93,11 +93,17 @@ public class TaskListCard extends UiPart<Region> {
     }
 
     /**
-     * When the <code>TaskListCard</code> is clicked, it toggles between showing optional information and not showing
-     * optional information.
+     * When the <code>TaskListCard</code> is clicked, it toggles between showing and not showing  the students for whom
+     * the Task has been completed. However, if no <code>Student</code>s are assigned to the <code>Task</code>, then the
+     * <code>TaskListCard</code> will not expand, since there is no information to display.
      */
     @FXML
     public void onCardClicked() {
+
+        if (this.task.getStudents().size() == 0) {
+            return;
+        }
+
         isExpanded = !isExpanded;
 
         if (isExpanded) {
