@@ -176,7 +176,7 @@ Step 2. The user executes `tutorialList` command to display all the tutorial gro
 
 Step 3. The user executes `tutorialAdd g/T03` command to add a new tutorial group.
 
-Step 1. The user executes `studentEdit 1 g/T03` command to assign the first student to the newly created tutorial group.
+Step 4. The user executes `studentEdit 1 g/T03` command to assign the first student to the newly created tutorial group.
 
 ### Expanding `TaskListCard` Feature
 
