@@ -38,9 +38,9 @@ faster than traditional GUI apps.
 * Optional parameters are indicated with `(optional)`.<br>
   e.g. `task add tn/&lt;taskName&gt; i/&lt;taskDescription&gt; d/&lt;taskDeadline&gt; s/&lt;student(s)&gt;(optional)`
   can be used as
-  * `task add tn/Assignment #6 i/Recursion d/31/12/2023` or
-  * `task add tn/Assignment #6 i/Recursion d/31/12/2021 s/Thomas Edison` or
-  * `task add tn/Assignment #6 i/Recursion d/31/12/2021 s/Thomas Edison s/George Washington`
+  * `task add tn/Assignment 6 i/Recursion d/31/12/2023` or
+  * `task add tn/Assignment 6 i/Recursion d/31/12/2021 s/Thomas Edison` or
+  * `task add tn/Assignment 6 i/Recursion d/31/12/2021 s/Thomas Edison s/George Washington`
 
 * Arguments with `(s)` after them can be used multiple times including zero times.<br>
   e.g. See the above example regarding `s/&lt;student(s)&gt;`.
