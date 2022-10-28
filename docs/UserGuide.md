@@ -176,8 +176,6 @@ Notes:
 - Command `bye bye`
 - Exit and close the app
 
-_Details coming soon..._
-
 ---
 
 ## FAQ
@@ -201,7 +199,7 @@ _Details coming soon..._
 
 #### 
 
-_Details coming soon..._
+
 
 ---
 
