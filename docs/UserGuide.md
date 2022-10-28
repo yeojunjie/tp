@@ -39,21 +39,21 @@ faster than traditional GUI apps.
 
 **:information_source: Notes about the command format:**<br>
 
-* Words surrounded in angled brackets (`&lt; &gt;`), e.g. `<taskName>` are the parameters to be supplied by the user.<br>
-  e.g. in `tutorial add g/&lt;tutorialGroup&gt;`, `&lt;tutorialGroup&gt;` is a parameter which can be used as `tutorial add g/T03`.
+* Words surrounded in angled brackets (`< >`), e.g. `<taskName>` are the parameters to be supplied by the user.<br>
+  e.g. in `tutorial add g/<tutorialGroup>`, `<tutorialGroup>` is a parameter which can be used as `tutorial add g/T03`.
 
 * Optional parameters are indicated with `(optional)`.<br>
-  e.g. `task add tn/&lt;taskName&gt; i/&lt;taskDescription&gt; d/&lt;taskDeadline&gt; s/&lt;student(s)&gt;(optional)`
+  e.g. `task add tn/<taskName> i/<taskDescription> d/<taskDeadline> s/<student(s)>(optional)`
   can be used as
   * `task add tn/Assignment #6 i/Recursion d/31/12/2023` or
   * `task add tn/Assignment #6 i/Recursion d/31/12/2021 s/Thomas Edison` or
   * `task add tn/Assignment #6 i/Recursion d/31/12/2021 s/Thomas Edison s/George Washington`
 
 * Arguments with `(s)` after them can be used multiple times including zero times.<br>
-  e.g. See the above example regarding `s/&lt;student(s)&gt;`.
+  e.g. See the above example regarding `s/<student(s)>`.
 
 * Parameters can be specified in any order.<br>
-  e.g. if the command specifies `group expel g/&lt;groupName&gt; s/&lt;studentName&gt;`, both of the following commands are equivalent:
+  e.g. if the command specifies `group expel g/<groupName> s/<studentName>`, both of the following commands are equivalent:
   * `group expel g/T03 s/Billy Boy`
   * `group expel s/Billy Boy g/T03`
 
