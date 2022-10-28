@@ -212,7 +212,6 @@ _Details coming soon..._
 | **List tasks**                     | `task list`                                                                                                                                                                      |
 | **Mark task**                      | `task mark i/TASK_NUMBER` e.g. `task mark i/1`                                                                                                                                   |
 | **Unmark task**                    | `task unmark i/TASK_NUMBER` e.g. `task unmark i/1`                                                                                                                               |
-| **Assign task**                    | `task assign n/TASK_NAME n/STUDENT_NAME` e.g. `task assign n/Grade Mission 2 n/James Ho`                                                                                         |
 | **Add tutorial group**             | `tutorial add g/<tutorialGroup>` e.g. `tutorial add g/T01`                                                                                                                       |
 | **Remove tutorial group**          | `tutorial delete g/<tutorialGroup>` e.g. `tutorial delete g/T01`                                                                                                                 |
 | **Enrol student**                  | `student enroll <index> g/<groupName>` e.g. `student enrol 1 g/T03`                                                                                                              |
