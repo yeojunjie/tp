@@ -14,16 +14,23 @@ faster than traditional GUI apps.
 ---
 
 ## Quick start
+
 1. Ensure you have Java `11` or above installed in your Computer.
+
 2. Download the latest TAA.jar from [here](https://github.com/AY2223S1-CS2103T-T13-1/tp/releases/tag/v1.3.trial).
+
 3. Copy the file to the folder you want to use as the home folder for your TAA.
-4. Double-click the file to start the app. The GUI appear in your app should be similar as the one shown below:
+
+4. Double-click the file to start the app. The GUI appear in your app should be similar as the one shown below:<br>
    <img src="images/TAA.png" width="500">
+
 5. Type the command in the command box and press Enter or click the Send button to execute. Some example commands you can try:
-* `student add` `n/John p/96123456 e/john@example.com g/T03`: Adds a student named John to the TAA.
-* `student edit` `1 g/T01`: Edits the student John to change his tutorial group from T03 to T01.
-* `student delete` `1`: Removes the student John from TAA.
+   * `student add n/John p/96123456 e/john@example.com g/T03`: Adds a student named John to the TAA.
+   * `student edit 1 g/T01`: Edits the student John to change his tutorial group from T03 to T01.
+   * `student delete 1`: Removes the student John from TAA.
+   
 6. Refer to the Features below for details of each command.
+
 ---
 
 ## Features
