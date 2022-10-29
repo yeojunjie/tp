@@ -135,7 +135,7 @@ public class TaskListCard extends UiPart<Region> {
         optionalInfo.setVisible(isExpanded);
         optionalInfo.setManaged(isExpanded);
 
-        // Update the UI, now that the optional information has increased/decreased the height of the card.
+        // Update the UI, now that the optional information's visibility has changed the height of the card.
         cardPane.requestLayout();
     }
 }
