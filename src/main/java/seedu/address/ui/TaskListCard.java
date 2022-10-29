@@ -46,8 +46,6 @@ public class TaskListCard extends UiPart<Region> {
     public TaskListCard(Task task, int displayedIndex) {
         super(FXML);
 
-        System.out.printf("TaskListCard constructor is called. Task: %s, isExpanded: %b\n", task.getTaskName(), isExpanded);
-
         this.task = task;
         id.setText(displayedIndex + ".");
         name.setText(String.valueOf(task.getTaskName()));
@@ -125,8 +123,6 @@ public class TaskListCard extends UiPart<Region> {
      */
     @FXML
     public void onCardClicked() {
-
-        System.out.printf("%s is clicked!\n", task.getTaskName());
 
         // If the task has no students, then there is no additional information to display.
         // Block any expansion and contraction.
