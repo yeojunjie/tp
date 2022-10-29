@@ -52,7 +52,6 @@ public class TaskListPanel extends UiPart<Region> {
                 setGraphic(null);
                 setText(null);
             } else {
-                // By default, the TaskListCard is not expanded.
                 setGraphic(new TaskListCard(task, getIndex() + 1).getRoot());
             }
         }
