@@ -51,10 +51,9 @@ public class TaskListPanel extends UiPart<Region> {
             if (empty || task == null) {
                 setGraphic(null);
                 setText(null);
-            } else if (isFocused()) {
-                setGraphic(new TaskListCard(task, getIndex() + 1, false).getRoot());
             } else {
-                setGraphic(new TaskListCard(task, getIndex() + 1, true).getRoot());
+                // By default, the TaskListCard is not expanded.
+                setGraphic(new TaskListCard(task, getIndex() + 1).getRoot());
             }
         }
     }
