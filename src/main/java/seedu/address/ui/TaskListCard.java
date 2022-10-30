@@ -2,7 +2,6 @@ package seedu.address.ui;
 
 import java.util.Set;
 
-import javafx.collections.ObservableMap;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Region;
@@ -44,8 +43,9 @@ public class TaskListCard extends UiPart<Region> {
     /**
      * Creates a {@code TaskListCard} with the given {@code Task} and index to display.
      */
-    public TaskListCard(Task task, int displayedIndex, boolean isExpanded) {
+    public TaskListCard(Task task, int displayedIndex) {
         super(FXML);
+
         this.task = task;
         id.setText(displayedIndex + ".");
         name.setText(String.valueOf(task.getTaskName()));
@@ -53,7 +53,7 @@ public class TaskListCard extends UiPart<Region> {
         deadline.setText(String.format("Due by %s", task.getTaskDeadline()));
 
         Set<Student> setOfStudents = task.getStudents();
-        final var gradesMap = Task.gradesMap;
+        final var gradesMap = Task.getGradesMap();
 
         if (setOfStudents.size() == 0) {
 
@@ -73,7 +73,9 @@ public class TaskListCard extends UiPart<Region> {
                 }
             }
             int percentageCompletion = 100 * numerator / denominator;
-            completion.setText(String.format("%d%% completed (%d/%d) students", percentageCompletion, numerator, denominator));
+            completion.setText(
+                    String.format("%d%% completed (%d/%d) students", percentageCompletion, numerator, denominator)
+            );
 
 
             studentsHeading.setText("List of Students:");
@@ -82,16 +84,18 @@ public class TaskListCard extends UiPart<Region> {
             StringBuilder studentsBodyTextString = new StringBuilder();
             for (Student student : setOfStudents) {
                 boolean taskCompletedForThisStudent = gradesMap.get(new GradeKey(student, task)) == Grade.GRADED;
-                studentsBodyTextString.append(String.format("[%s] %s\n", taskCompletedForThisStudent ? "X" : " ", student.getName()));
+                studentsBodyTextString.append(String.format(
+                        "[%s] %s\n", taskCompletedForThisStudent ? "X" : " ", student.getName())
+                );
             }
             studentsBodyText.setText(studentsBodyTextString.toString());
         }
 
-
-
-        this.isExpanded = isExpanded;
-        // Use the isExpanded parameter to determine whether to (immediately) show the optional information.
-        onCardClicked();
+        // TaskListCards are created when the "Tasks" button is clicked.
+        // At this point, no TaskListCard is expanded.
+        this.isExpanded = false;
+        optionalInfo.setVisible(false);
+        optionalInfo.setManaged(false);
     }
 
     @Override
@@ -120,18 +124,18 @@ public class TaskListCard extends UiPart<Region> {
     @FXML
     public void onCardClicked() {
 
+        // If the task has no students, then there is no additional information to display.
+        // Block any expansion and contraction.
         if (this.task.getStudents().size() == 0) {
             return;
         }
 
+        // Toggle between showing and not showing the students for whom the task has been completed.
         isExpanded = !isExpanded;
+        optionalInfo.setVisible(isExpanded);
+        optionalInfo.setManaged(isExpanded);
 
-        if (isExpanded) {
-            optionalInfo.setVisible(true);
-            optionalInfo.setManaged(true);
-        } else {
-            optionalInfo.setVisible(false);
-            optionalInfo.setManaged(false);
-        }
+        // Update the UI, now that the optional information's visibility has changed the height of the card.
+        cardPane.requestLayout();
     }
 }
