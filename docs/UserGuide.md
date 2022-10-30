@@ -14,16 +14,23 @@ faster than traditional GUI apps.
 ---
 
 ## Quick start
+
 1. Ensure you have Java `11` or above installed in your Computer.
+
 2. Download the latest TAA.jar from [here](https://github.com/AY2223S1-CS2103T-T13-1/tp/releases/tag/v1.3.trial).
+
 3. Copy the file to the folder you want to use as the home folder for your TAA.
-4. Double-click the file to start the app. The GUI appear in your app should be similar as the one shown below:
+
+4. Double-click the file to start the app. The GUI appear in your app should be similar as the one shown below:<br>
    <img src="images/TAA.png" width="500">
+
 5. Type the command in the command box and press Enter or click the Send button to execute. Some example commands you can try:
    * `student add` `n/John p/96123456 e/john@example.com g/T03`: Adds a student named John to the TAA.
    * `student edit` `1 g/T01`: Edits the student John to change his tutorial group from T03 to T01.
    * `student delete` `1`: Removes the student John from TAA.
+
 6. Refer to the Features below for details of each command.
+
 ---
 
 ## Features
@@ -32,21 +39,21 @@ faster than traditional GUI apps.
 
 **:information_source: Notes about the command format:**<br>
 
-* Words surrounded in angled brackets (`&lt; &gt;`), e.g. `<taskName>` are the parameters to be supplied by the user.<br>
-  e.g. in `tutorial add g/&lt;tutorialGroup&gt;`, `&lt;tutorialGroup&gt;` is a parameter which can be used as `tutorial add g/T03`.
+* Words surrounded in angled brackets (`< >`), e.g. `<taskName>` are the parameters to be supplied by the user.<br>
+  e.g. in `tutorial add g/<tutorialGroup>`, `<tutorialGroup>` is a parameter which can be used as `tutorial add g/T03`.
 
 * Optional parameters are indicated with `(optional)`.<br>
-  e.g. `task add tn/&lt;taskName&gt; i/&lt;taskDescription&gt; d/&lt;taskDeadline&gt; s/&lt;student(s)&gt;(optional)`
+  e.g. `task add tn/<taskName> i/<taskDescription> d/<taskDeadline> s/<student(s)>(optional)`
   can be used as
   * `task add tn/Assignment #6 i/Recursion d/31/12/2023` or
   * `task add tn/Assignment #6 i/Recursion d/31/12/2021 s/Thomas Edison` or
   * `task add tn/Assignment #6 i/Recursion d/31/12/2021 s/Thomas Edison s/George Washington`
 
 * Arguments with `(s)` after them can be used multiple times including zero times.<br>
-  e.g. See the above example regarding `s/&lt;student(s)&gt;`.
+  e.g. See the above example regarding `s/<student(s)>`.
 
 * Parameters can be specified in any order.<br>
-  e.g. if the command specifies `group expel g/&lt;groupName&gt; s/&lt;studentName&gt;`, both of the following commands are equivalent:
+  e.g. if the command specifies `group expel g/<groupName> s/<studentName>`, both of the following commands are equivalent:
   * `group expel g/T03 s/Billy Boy`
   * `group expel s/Billy Boy g/T03`
 
@@ -58,7 +65,7 @@ faster than traditional GUI apps.
 
 </div>
 
-### Add students : `student add`
+### Add students: `student add`
 
 - Command `student add n/studentName p/phoneNumber e/email g/tutorialGroup(optional) t/tags(optional)`
 - Adds a student with the given phone number, email, tutorial group, and tags to the list of students
@@ -73,7 +80,7 @@ Notes:
 - `<tutorialGroup>` should follow the format Txx, where x is a numeric value, and it should not be blank
 - `<tags>` should be alphanumeric with no white space
 
-### Remove students : `student delete`
+### Remove students: `student delete`
 
 - Command `student delete <indices>`
 - Removes the indexed students(s) from the list of students
@@ -82,7 +89,7 @@ Notes:
 - Each `index` must be a positive integer which corresponds to an existing student
 - You can delete multiple students at once by separating the indices with a space. e.g. `student delete 1 2 3`
 
-### Edit students : `student edit`
+### Edit students: `student edit`
 
 - Command `student edit <index> n/<studentName>(optional) p/<studentPhone>(optional) e/<studentEmail>(optional) g/<tutorialGroup>(optional) t/<tag>(optional)`
 - Edits the student by its given index with at least 1 variable specified to change.
@@ -90,13 +97,12 @@ Notes:
 Notes:
 - `index` must be a positive integer and must correspond to an existing student
 
-### List students : `student list`
+### List students: `student list`
 
 - Command `student list`
-- Abbreviate with `students`
 - Shows a list of all students
 
-### Add new task : `task add`
+### Add new task: `task add`
 
 - Command `task add tn/<taskName> i/<taskDescription> d/<taskDeadline> s/<student(s)>(optional)`
 - Adds a task to the list of tasks
@@ -117,7 +123,7 @@ Notes:
 - Each `index` must be a positive integer which corresponds to an existing task
 - You can delete multiple tasks at once by separating the indices with a space. e.g. `task delete 1 2 3`
 
-### Edit task : `task edit`
+### Edit task: `task edit`
 
 - Command `task edit <index> tn/<taskName>(optional) i/<taskDescription>(optional) d/<taskDeadline>(optional) s/<student(s)>(optional)`
 - Edits the task by its given index with at least 1 variable specified to change.
@@ -125,23 +131,22 @@ Notes:
 Notes:
 - `index` must be a positive integer and valid
 
-### List tasks :
+### List tasks: `task list`
 
 - Command `task list`
-- Abbreviate with `tasks`
 - Shows a list of tasks
 
-### Add new tutorial group : `tutorial add`
+### Add new tutorial group: `tutorial add`
 
 - Command `tutorial add g/<tutorialGroup>`
 - Adds the tutorial group with the name `tutorialGroup`
 
-### Remove tutorial group : `tutorial delete`
+### Remove tutorial group: `tutorial delete`
 
 - Command `tutorial delete g/<tutorialGroup>`
 - Removes the tutorial group with the name `tutorialGroup`
 
-### Enroll a student into a group : `student enroll`
+### Enroll a student into a group: `student enroll`
 
 - Command `student enroll <index> g/<groupName>`
 - Enrolls the student at index i to the group named `groupName`
@@ -161,17 +166,15 @@ Notes:
 - Command `grade view <studentIndex> <taskIndex>`
 - Shows the grade status of the specified student's assignment
 
-### Display user guide url : `help me`
+### Display user guide url: `help me`
 
 - Command `help me`
 - Shows a popup with the user guide url in it
 
-### Exit the app : `bye bye`
+### Exit the app: `bye bye`
 
 - Command `bye bye`
 - Exit and close the app
-
-_Details coming soon..._
 
 ---
 
@@ -196,7 +199,7 @@ _Details coming soon..._
 
 #### 
 
-_Details coming soon..._
+
 
 ---
 
