@@ -92,7 +92,6 @@ Notes:
 ### List students : `student list`
 
 - Command `student list`
-- Abbreviate with `students`
 - Shows a list of all students
 
 ### Add new task : `task add`
@@ -126,7 +125,6 @@ Notes:
 ### List tasks :
 
 - Command `task list`
-- Abbreviate with `tasks`
 - Shows a list of tasks
 
 ### Add new tutorial group : `tutorial add`
