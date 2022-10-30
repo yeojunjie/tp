@@ -25,9 +25,9 @@ faster than traditional GUI apps.
    <img src="images/TAA.png" width="500">
 
 5. Type the command in the command box and press Enter or click the Send button to execute. Some example commands you can try:
-   * `student add` `n/John p/96123456 e/john@example.com g/T03`: Adds a student named John to the TAA.
-   * `student edit` `1 g/T01`: Edits the student John to change his tutorial group from T03 to T01.
-   * `student delete` `1`: Removes the student John from TAA.
+   * `student add n/John p/96123456 e/john@example.com g/T03`: Adds a student named John to the TAA.
+   * `student edit 1 g/T01`: Edits the student John to change his tutorial group from T03 to T01.
+   * `student delete 1`: Removes the student John from TAA.
 
 6. Refer to the Features below for details of each command.
 
@@ -39,7 +39,7 @@ faster than traditional GUI apps.
 
 **:information_source: Notes about the command format:**<br>
 
-* Words surrounded in angled brackets (`< >`), e.g. `<taskName>` are the parameters to be supplied by the user.<br>
+* Words surrounded in angled brackets (`< >`), e.g. `<taskName>`, are the parameters to be supplied by the user.<br>
   e.g. in `tutorial add g/<tutorialGroup>`, `<tutorialGroup>` is a parameter which can be used as `tutorial add g/T03`.
 
 * Optional parameters are indicated with `(optional)`.<br>
@@ -47,7 +47,7 @@ faster than traditional GUI apps.
   can be used as
   * `task add tn/Assignment 6 i/Recursion d/31/12/2023` or
   * `task add tn/Assignment 6 i/Recursion d/31/12/2021 s/Thomas Edison` or
-  * `task add tn/Assignment 6 i/Recursion d/31/12/2021 s/Thomas Edison s/George Washington`
+  * `task add tn/Assignment 6 i/Recursion d/31/12/2021 s/Thomas Edison s/George Washington`.
 
 * Arguments with `(s)` after them can be used multiple times including zero times.<br>
   e.g. See the above example regarding `s/<student(s)>`.
@@ -73,21 +73,21 @@ faster than traditional GUI apps.
 Notes:
 - `<studentName>` should be alphanumeric and should not be blank
 - `<phoneNumber>` should only contain numbers, and it should be at least 3 digits long
-- `<email>` should contain in the format: local-part@domain
-  - local-part should only contain alphanumerics and these special characters, excluding the parentheses, (+_.-)
-  - local-part should not start or end with any special characters
-  - domain should be at least 2 characters long
-- `<tutorialGroup>` should follow the format Txx, where x is a numeric value, and it should not be blank
-- `<tags>` should be alphanumeric with no white space
+- `<email>` should contain in the format: `local-part@domain`
+  - `local-part` should only contain letters, numbers, and the special characters `+`, `_`, `.`, and `-`
+  - `local-part` should not start or end with the above-mentioned special characters
+  - `domain` should be at least 2 characters long
+- `<tutorialGroup>` should follow the format `Txx`, where `x` is any digit.
+- When specifying tags, each tag can only contain letters and numbers. No spaces are allowed.
 
 ### Remove students: `student delete`
 
 - Command `student delete <indices>`
-- Removes the indexed students(s) from the list of students
+- Removes the indexed student(s) from the list of students
 
 Notes:
 - Each `index` must be a positive integer which corresponds to an existing student
-- You can delete multiple students at once by separating the indices with a space. e.g. `student delete 1 2 3`
+- You can delete multiple students at once by separating the indices with a space, e.g. `student delete 1 2 3`
 
 ### Edit students: `student edit`
 
@@ -96,7 +96,7 @@ Notes:
 
 Notes:
 - `index` must be a positive integer and must correspond to an existing student.
-- You may remove all of a student's tags by typing `t/` without specifying any tags after it.
+- You may remove all of a student's tags by typing `t/` without specifying any tags after it, e.g. `student edit 1 t/`
 
 
 ### List students: `student list`
@@ -108,7 +108,7 @@ Notes:
 
 - Command `task add tn/<taskName> i/<taskDescription> d/<taskDeadline> s/<student(s)>(optional)`
 - Adds a task to the list of tasks
-- The task is initially assigned to no students if no student variable is entered
+- The task is initially assigned to no students if no students are specified.
 
 Notes:
 - `taskName` should only contain alphanumeric characters and spaces, and it should not be blank
@@ -123,7 +123,7 @@ Notes:
 
 Notes:
 - Each `index` must be a positive integer which corresponds to an existing task
-- You can delete multiple tasks at once by separating the indices with a space. e.g. `task delete 1 2 3`
+- You can delete multiple tasks at once by separating the indices with a space, e.g. `task delete 1 2 3`
 
 ### Edit task: `task edit`
 
@@ -151,7 +151,7 @@ Notes:
 ### Enroll a student into a group: `student enroll`
 
 - Command `student enroll <index> g/<groupName>`
-- Enrolls the student at index i to the group named `groupName`
+- Enrolls the student at index `index` to the group named `groupName`
 
 ### Expel a student from a group: `student expel`
 
@@ -197,8 +197,8 @@ Notes:
 - You can also click on the help button to view the commands.
 
 #### Why can't I add a student?
-- Check the format of your add command. You can refer to the pop-up message or the help page for the command format.
-- Check if the name of the new student belongs to another student.
+- Check the format of your `student add` command. You can refer to the pop-up message or the help page for the command format.
+- Check if the name of the new student already belongs to another student.
 
 #### Why can't I enroll a student to a tutorial group?
 - Check whether the specified student and tutorial group exists.
