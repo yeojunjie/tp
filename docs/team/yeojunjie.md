@@ -5,7 +5,8 @@ title: Yeo Jun Jie's Project Portfolio Page
 
 ### Project: Teaching Assistant Assistant
 
-Teaching Assistant Assistant (TAA) is a desktop application meant for Teaching Assistants to manage their tasks and students. The user interacts with TAA via a command line interface, and it has a graphical user interface created with JavaFX. It is written in Java, and has about 9000 lines of code.
+Teaching Assistant Assistant (TAA) is a desktop app for Teaching Assistants (TAs). It keeps track of TAs’ students,
+tutorial groups, and tasks.
 
 Given below are my contributions to the project.
 
