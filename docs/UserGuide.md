@@ -61,12 +61,12 @@ This section shows a quick summary of the list of commands that are available in
 
 ### Student Management
 
-| Action                                    | Format, Examples                                                                                                                                                                 |
-|-------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **[Add student](#add-students)**          | `student add n/<studentName> p/<phoneNumber> e/<email> g/<tutorialGroup>(optional) t/<tags>(optional)` e.g. `student add n/James Ho p/98765432 e/a@gmail.com g/T03 t/yearTwo`    |
-| **[Remove student(s)](#remove-students)** | `student delete <indices>` e.g. `student delete 1 3`                                                                                                                             |
-| **[Edit student](#edit-students)**        | `student edit <index> n/<studentName>(optional) p/<studentPhone>(optional) e/<studentEmail>(optional) g/<tutorialGroup>(optional) t/<tag>(optional)` e.g. `student edit 1 g/T05` |
-| **[List students](#list-students)**       | `student list`                                                                                                                                                                   |
+| Action                                    | Format, Examples                                                                                                                                                                  |
+|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **[Add student](#add-students)**          | `student add n/<studentName> p/<phoneNumber> e/<email> g/<tutorialGroup>(optional) t/<tags>(optional)` e.g. `student add n/James Ho p/98765432 e/a@gmail.com g/T03 t/yearTwo`     |
+| **[Remove student(s)](#remove-students)** | `student delete <indices>` e.g. `student delete 1 3`                                                                                                                              |
+| **[Edit student](#edit-students)**        | `student edit <index> n/<studentName>(optional) p/<studentPhone>(optional) e/<studentEmail>(optional) g/<tutorialGroup>(optional) t/<tags>(optional)` e.g. `student edit 1 g/T05` |
+| **[List students](#list-students)**       | `student list`                                                                                                                                                                    |
 
 ### Task Management
 
@@ -185,7 +185,7 @@ E.g. `student delete 1 3`
 
 Edits the student by its given index with at least 1 variable specified to change.
 
-- Command: `student edit <index> n/<studentName>(optional) p/<studentPhone>(optional) e/<studentEmail>(optional) g/<tutorialGroup>(optional) t/<tag>(optional)`
+- Command: `student edit <index> n/<studentName>(optional) p/<studentPhone>(optional) e/<studentEmail>(optional) g/<tutorialGroup>(optional) t/<tags>(optional)`
 
 E.g. `student edit 1 g/T05`
 
@@ -368,6 +368,7 @@ E.g. tutorial filter g/T01
 **:information_source: Notes:**<br>
 
 - `tutorialGroup` must follow the format Txx, where x is a numeric value, and it should not be blank
+- the specified `tutorialGroup` must exist
 </div>
 
 #### Reset filters and show all students
@@ -409,9 +410,9 @@ E.g. `grade view 3 7`
 </div>
 
 ### General
-#### Display user guide url
+#### Display user guide URL
 
-Shows a popup with the user guide url in it
+Shows a popup with the user guide URL in it
 
 - Command: `help me`
 
