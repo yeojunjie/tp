@@ -34,6 +34,11 @@ class GradeTest {
     }
 
     @Test
+    void null_isValidDescription() {
+        assertThrows(NullPointerException.class, () -> Grade.isValidDescription(null));
+    }
+
+    @Test
     void lowercaseT_isValidDescription() {
         assertFalse(Grade.isValidDescription("t"));
     }
